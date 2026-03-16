@@ -31,6 +31,7 @@ import { Button } from "@/components/ui/button";
 
 const INSTANCE_SETTINGS_MEMORY_KEY = "paperclip.lastInstanceSettingsPath";
 const DEFAULT_INSTANCE_SETTINGS_PATH = "/instance/settings/heartbeats";
+const PAPERCLIP_VERSION_LABEL = `Paperclip v${__PAPERCLIP_VERSION__}`;
 
 function normalizeRememberedInstanceSettingsPath(rawPath: string | null): string {
   if (!rawPath) return DEFAULT_INSTANCE_SETTINGS_PATH;
@@ -337,6 +338,9 @@ export function Layout() {
                   {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
                 </Button>
               </div>
+              <p className="px-3 pt-1 text-[11px] text-muted-foreground/80">
+                {PAPERCLIP_VERSION_LABEL}
+              </p>
             </div>
           </div>
         ) : (
@@ -387,6 +391,9 @@ export function Layout() {
                   {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
                 </Button>
               </div>
+              <p className="px-3 pt-1 text-[11px] text-muted-foreground/80">
+                {PAPERCLIP_VERSION_LABEL}
+              </p>
             </div>
           </div>
         )}
